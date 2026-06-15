@@ -1,0 +1,45 @@
+/* src/index.css или app.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F2ED;
+  min-height: 100vh;
+  color: #2E2E2E;
+}
+
+/* Плавный скролл */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Убираем синий фон у кнопок на мобильных */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Красивые скроллбары */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F2ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8C7343;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B5A35;
+}
