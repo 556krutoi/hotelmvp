@@ -1,28 +1,24 @@
 // src/components/Header.jsx
-export default function Header({ bookingsCount = 0, onOpenAdmin }) {
+export default function Header({ onOpenAdmin }) {
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          {/* ВСТАВЬ КАРТИНКУ ВМЕСТО ПУСТОГО SPAN */}
+        <div className="flex items-center gap-3">
           <img 
             src="/images/logo.png" 
             alt="Mövenpick Logo" 
-            className="h-32 w-auto"
+            className="h-12 w-auto"
           />
+          <div>
+            <span className="font-light text-sm text-[#2E2E2E] tracking-wide">Mövenpick <span className="font-semibold">Na Jomtien</span></span>
+            <span className="text-[9px] text-gray-400 block -mt-0.5">Siam Pattaya</span>
+          </div>
         </div>
         
-        <div className="flex items-center gap-6">
-          <nav className="hidden md:flex gap-8">
-            <a href="#services" className="text-[#2E2E2E] hover:text-[#8C7343] transition-colors">Services</a>
-            <button onClick={onOpenAdmin} className="text-[#2E2E2E] hover:text-[#8C7343] transition-colors">Admin</button>
-          </nav>
-          
-          {bookingsCount > 0 && (
-            <div>
-            </div>
-          )}
-        </div>
+        <nav className="hidden md:flex gap-6">
+          <a href="#services" className="text-xs text-[#2E2E2E] hover:text-[#8C7343] transition uppercase tracking-wide">Services</a>
+          <button onClick={onOpenAdmin} className="text-xs text-[#2E2E2E] hover:text-[#8C7343] transition uppercase tracking-wide">Admin</button>
+        </nav>
       </div>
     </header>
   );
